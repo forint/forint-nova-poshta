@@ -1,0 +1,6 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI}  !(\.js|\.css|\.png|\.jpg|\.gif|\.jpeg|\.bmp|\.eot|\.woff|\.ttf|\.svg)$
+RewriteRule . /index.php [L]
